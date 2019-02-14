@@ -1,4 +1,4 @@
-package JP1;
+package jp1;
 
 public class JP1 {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class JP1 {
         String karol = "Karol" ;
         String michal = "Michał" ;
 
-        System.out.println(kamil + " ;" + karol + " ;" + michal);
+        System.out.println(kamil + " " + karol + " " + michal);
 
 
     }
