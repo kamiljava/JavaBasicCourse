@@ -14,6 +14,9 @@ public class JP4 {
         System.out.println(ala2[5]);
         System.out.println(ala2[6]);
 
+        for(String ala3 : ala2){
+            System.out.println(ala3);
+        }
     }
 
 }
