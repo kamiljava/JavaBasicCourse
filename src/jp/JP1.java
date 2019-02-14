@@ -1,4 +1,4 @@
-package jp1;
+package jp;
 
 public class JP1 {
     public static void main(String[] args) {
