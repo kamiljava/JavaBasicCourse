@@ -12,9 +12,9 @@ public class TableExample {
             System.out.println(s);
         }
         //petla do 10000
-        for(int i = 0; i < 10000; i++){
-            System.out.print(i +" ");
-        }
+        //for(int i = 0; i < 10000; i++){
+        //    System.out.print(i +" ");
+        //}
 
         //wypisanie
         System.out.println(signal[0]);
