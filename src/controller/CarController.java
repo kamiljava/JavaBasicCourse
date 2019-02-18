@@ -4,17 +4,25 @@ import OOPbasic.model.Car;
 
 public class CarController {
 
-    Car[] cars = new Car[100];
-    public static int index = 0;
+    private  Car[] cars = new Car[100];
+    //skladowe statyczne
+    private static int index = 0;
+
+    public static  int getIndex(){
+        return index;
+    }
+    public  static void incrementIndex(){
+        index++;
+    }
 
     public void purchaseCar(String brand, String model, double price, int year) {
         Car c = new Car(brand, model, price, year);
-        cars[index] = c;
-        index ++;
+        cars[getIndex()] = c;
+        incrementIndex();
         }
 
     public void getCars() {
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < getIndex(); i++) {
             System.out.println(cars[i]);
 
         }

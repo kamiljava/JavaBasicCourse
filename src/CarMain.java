@@ -29,6 +29,7 @@ public class CarMain {
                     cc.purchaseCar(brand, model, price, year);
                     break;
                 case 2:
+                    System.out.println("Ilość wprowadzonych samochodów: " + CarController.getIndex());
                     cc.getCars();
                     break;
                 case 0:
