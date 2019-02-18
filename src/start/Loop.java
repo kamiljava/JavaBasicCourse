@@ -9,10 +9,7 @@ public class Loop {
 
         int key = -1;
         while (key != 0) {
-
-
             System.out.println("Co chcesz zrobić :\n (1) Zadanie1 \n (2) Zadanie2 \n (3) Zadanie3 \n (0) Wyjście");
-
             key = scanner.nextInt();
 
             switch (key) {
@@ -20,7 +17,6 @@ public class Loop {
                     System.out.println("Rozwiązanie zadania 1");
                     break;
                 case 2:
-
                     System.out.println("Rozwiązanie zadania 2");
                     break;
                 case 3:
@@ -32,9 +28,6 @@ public class Loop {
                 default:
                     System.out.println("Zły wybór!");
             }
-
-
         }
-
     }
 }
