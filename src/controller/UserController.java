@@ -37,9 +37,11 @@ public class UserController {
     }
 
     public void sortByDate() {
+
         for (int j = 0; j < index; j++) {
             for (int i = 1; i < index; i++) {
                 //sprawdzanie czy pierwszy jest mlodszy od pierwszego
+                //dodanie ! przed birthDateComparator zmienia rodzaj sortowania
                 if (birthDateComparator(i - 1, i)) {
 
                     //tymczasowy element
@@ -53,6 +55,5 @@ public class UserController {
                 }
             }
         }
-
     }
 }

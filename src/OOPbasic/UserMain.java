@@ -20,7 +20,7 @@ public class UserMain {
         System.out.println("User pierwszy: " + uc.birthDateComparator(0,1) );
         System.out.println("User drugi: " + uc.birthDateComparator(1,2) );
 
-        System.out.println("Posortowane po dacie: ASC");
+        System.out.println("Posortowane po dacie: DESC");
         uc.sortByDate();
         uc.getAllUser();
     }
