@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70492950-3b52-4f4f-ac6f-17e1ae865236" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/DateTimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/RegExpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/start/ReqExpMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KursJava/OOPbasic/UserMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KursJava/OOPbasic/UserMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KursJava/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KursJava/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOPbasic/UserMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOPbasic/UserMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/UserController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/DateTimeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="145">
@@ -29,6 +26,27 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/start/ReqExpMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/RegExpController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="22" column="74" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -122,6 +140,8 @@
         <option value="$PROJECT_DIR$/src/OOPbasic/UserMain.java" />
         <option value="$PROJECT_DIR$/src/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/controller/DateTimeController.java" />
+        <option value="$PROJECT_DIR$/src/start/ReqExpMain.java" />
+        <option value="$PROJECT_DIR$/src/controller/RegExpController.java" />
       </list>
     </option>
   </component>
@@ -164,19 +184,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="KursJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KursJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="OOPbasic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KursJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KursJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="OOPbasic" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -185,7 +192,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550582858610" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550588961469" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -205,7 +212,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DateTimeController">
+  <component name="RunManager" selected="Application.RegExpController">
     <configuration name="Cosinus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jp.Cosinus" />
       <module name="KursJava" />
@@ -232,12 +239,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JP19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jp.JP19" />
+    <configuration name="RegExpController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.RegExpController" />
       <module name="KursJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jp.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -245,12 +252,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Matrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jp.Matrix" />
+    <configuration name="ReqExpMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="start.ReqExpMain" />
       <module name="KursJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jp.*" />
+          <option name="PATTERN" value="start.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -273,11 +280,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RegExpController" />
+        <item itemvalue="Application.ReqExpMain" />
         <item itemvalue="Application.DateTimeController" />
         <item itemvalue="Application.UserMain" />
         <item itemvalue="Application.Cosinus" />
-        <item itemvalue="Application.Matrix" />
-        <item itemvalue="Application.JP19" />
       </list>
     </recent_temporary>
   </component>
@@ -730,6 +737,23 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/start/ReqExpMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/RegExpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="22" column="74" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
         </state>
       </provider>
     </entry>
