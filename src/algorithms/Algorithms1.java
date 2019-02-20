@@ -8,14 +8,15 @@ package algorithms;
 // Dodaj do tego programu tekstowy interfejs użytkownika umożliwiający wprowadzanie danych oraz ich poprawną walidację.
 
 
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Algorithms1 {
     //Potęgowanie
-    public int power() {
-        //1
-        int x = 3;
-        int y = 4;
+    public int power(int x, int y) {
+
         //2
         int result = 1;
         for (int i = 1; i <= y; i++) {
@@ -64,7 +65,8 @@ public class Algorithms1 {
         }
         return num == sum ? true : false;
     }
-//Napisz program, który implementuje algorytm Euklidesa (NWD) dla zadanych dwóch liczb dziesiętnych.
+
+    //Napisz program, który implementuje algorytm Euklidesa (NWD) dla zadanych dwóch liczb dziesiętnych.
     public int getNWD(int x, int y) {
         //sprawdzanie wiekszej i mniejszej
         int less = x;
@@ -84,11 +86,11 @@ public class Algorithms1 {
     }
 //Napisz program, który konwertuje liczbę zapisaną w systemie dziesiętnym na system dwójkowy i odwrotnie.
 
-    public String decimalToBinary(int decimal){
+    public String decimalToBinary(int decimal) {
         String binary = "";
-        while (decimal>=1){
-            binary=binary.concat(String.valueOf(decimal % 2));
-            decimal=decimal/2;
+        while (decimal >= 1) {
+            binary = binary.concat(String.valueOf(decimal % 2));
+            decimal = decimal / 2;
         }
         //odwrocenie liczby
         //StringBuffer pozwala na modyfikacje zawartosci tablicy Stringow
@@ -99,21 +101,71 @@ public class Algorithms1 {
         //return new StringBuffer(binary).reverse().toString();
     }
 
+    public int binaryToDecimal(String binary) {
+        int decimal = 0;
+        for (int i = 0; i < binary.length(); i++) {
+            decimal = decimal + (((int) binary.charAt(i) - 48) * power(2, (binary.length() - 1) - i));
+        }
+        return decimal;
+    }
 
+    //Napisz program, który wypisze n-liczb pierwszych.
+//Napisz program, która sprawdzi czy podana liczba jest liczbą pierwszą.
+    public boolean isPrimary(int number) {
+        int counter = 0;
+        //inicjalizacja licznika podzielnikow
+        //w pętli for zliczamy wszystkie liczby naturalne do liczby number
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                counter++;
+            }
+        }
+        //kazdorazowo sprawdzając w instrukcji if czy te liczby sa dzielnikami number
+        //tak- licznik ++
+        //nie - nie
+        return counter == 0 && number != 1 ? true : false;
+        //zwracamy true jezeli licznik == 0; : false jezeli licznik >0
+    }
 
+    public void getPrimaryNumbers(int n) {
+        //inicjalizacja licznika zliczen
+        int counter = 0;
+        int i =2;
+        LocalTime lt_start =LocalTime.now();
+        //petla while
+        //instrukcja if sprawdza czy aktualna liczba jest liczba pierwsza
+        //jezeli tak to wypisujemy i zwiekszamy licznik
+        System.out.println("Liczby pierwsze to: ");
+        while (counter<n){
+            if (isPrimary(i)){
+                counter++;
+                System.out.print(i + " ");
+            }
+            i++;
+        }
+        //liczenie czasu
+        LocalTime lt_stop = LocalTime.now();
+        Duration time_interval = Duration.between(lt_start,lt_stop);
+        System.out.println("\n Czas wykonania: " + time_interval);
+
+    }
 
     public static void main(String[] args) {
         Algorithms1 a1 = new Algorithms1();
-        System.out.println("Wynik z potęgowania wynosi : " + a1.power());
+        System.out.println("Wynik z potęgowania wynosi : " + a1.power(2, 3));
         System.out.println("Silnia wynosi : " + a1.strong());
         System.out.println("Ciąg geometryczny wynosi : " + a1.geometricString());
         System.out.println("Ciąg artmetyczny wynosi : " + a1.algSequence(2, 2, 4));
         System.out.println("Czy liczba jest doskonałą : " + a1.perfectNumber(11));
         System.out.println("Czy liczba jest doskonałą : " + a1.perfectNumber(28));
-        System.out.println("NWD: " + a1.getNWD(12,9));
-        System.out.println("NWD: " + a1.getNWD(11,13));
+        System.out.println("NWD: " + a1.getNWD(12, 9));
+        System.out.println("NWD: " + a1.getNWD(11, 13));
         System.out.println("Decymalny na binarny " + a1.decimalToBinary(12));
-
+        System.out.println("Binarny na decymalny " + a1.binaryToDecimal("1100"));
+        System.out.println("Czy liczba jest liczbą pierwszą: " + a1.isPrimary(13));
+        System.out.println("Czy liczba jest liczbą pierwszą: " + a1.isPrimary(15));
+        System.out.println("Czy liczba jest liczbą pierwszą: " + a1.isPrimary(2111));
+        a1.getPrimaryNumbers(100); //ilosc liczb pierwszych ktore chcemy zobaczyc
 
 
     }
