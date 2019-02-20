@@ -147,8 +147,8 @@ public class Algorithms1 {
         LocalTime lt_stop = LocalTime.now();
         Duration time_interval = Duration.between(lt_start,lt_stop);
         System.out.println("\n Czas wykonania: " + time_interval);
-
     }
+
 
     public static void main(String[] args) {
         Algorithms1 a1 = new Algorithms1();
@@ -165,7 +165,7 @@ public class Algorithms1 {
         System.out.println("Czy liczba jest liczbą pierwszą: " + a1.isPrimary(13));
         System.out.println("Czy liczba jest liczbą pierwszą: " + a1.isPrimary(15));
         System.out.println("Czy liczba jest liczbą pierwszą: " + a1.isPrimary(2111));
-        a1.getPrimaryNumbers(100); //ilosc liczb pierwszych ktore chcemy zobaczyc
+        a1.getPrimaryNumbers(50); //ilosc liczb pierwszych ktore chcemy zobaczyc
 
 
     }
