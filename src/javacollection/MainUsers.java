@@ -14,7 +14,8 @@ public class MainUsers {
         uc.deleteUser("Karol");
         uc.deleteUser("Grażyna");
         uc.showUsers();
-        uc.changePassword("Kamil","22","88","88");
+        uc.changePassword("Kamil","22","Aaaaaaa","Aaaaaaa");
+        uc.changePassword("Michał","22","Aaa1aaaa","Aaa1aaaa");
         uc.changePassword("Andrzej","22","88","88");
         uc.showUsers();
 

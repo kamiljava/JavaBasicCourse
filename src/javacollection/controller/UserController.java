@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 public class UserController {
 
@@ -48,9 +49,13 @@ public class UserController {
         for (int i = 0; i < registered_user.size(); i++) {
             if (registered_user.get(i).getLogin().equals(login)) {
                 if (newPassword1.equals(newPassword2) && !newPassword1.equals(oldPassword)) {
-                    registered_user.get(i).setPassword(newPassword1);
-                    System.out.println("Hasło użytkownika " + login + " zostało zmienione");
-                    return true;
+                    if (passwordChceck(newPassword1)) {
+                        registered_user.get(i).setPassword(newPassword1);
+                        System.out.println("Hasło użytkownika " + login + " zostało zmienione");
+                        return true;
+                    }
+                    System.out.println("Złe hasło. Hasło powinno miec min 6 znakow i nie wiecej niz 32 i zawierać co najmiej jedna wielką lierę i przynajmniej jedną cydrę");
+                    return false;
                 }
                 System.out.println("Zle podano dane");
                 return false;
@@ -59,4 +64,15 @@ public class UserController {
         System.out.println("Użytkownik: " + login + " nie istnieje lub podałeś złe hasło");
         return false;
     }
+    public boolean passwordChceck(String newPassword){
+        //długosc hasla co najmniej 6 znakow i maksimum 32 znaki
+        String template = ".{6,32}";
+        String template2 = ".*\\d+.*";
+        String templete3 = ".*[A-Z]+.*";
+        return Pattern.matches(template,newPassword) && Pattern.matches(template2,newPassword) && Pattern.matches(templete3,newPassword);
+    }
+
+
+
+
 }
