@@ -12,7 +12,7 @@ public class Auto {
 
     private List<String> equitmentName = new ArrayList<>(Arrays.asList("Klimatyzacja","ABS","GPS"));
 
-    private List<Double> equitmentPrice = new ArrayList<>(Arrays.asList(2000.0,5000.0,1000.0));
+    private List<Double> equitmentPrice = new ArrayList<>(Arrays.asList(20000.0,5000.0,1000.0));
     private List<Integer> equitmentOrder = new ArrayList<>(Arrays.asList(0,0,0));
 
     private List<List> equitment = new ArrayList<>(Arrays.asList(equitmentName, equitmentPrice, equitmentOrder));
@@ -29,6 +29,21 @@ public class Auto {
         return String.format("%10s | %10s | %10s | %15.2f | %10s | %15.2f" ,
                 vinNumber, brand, model, priceBasic, getOrderEquitmentNames(),calcFullPrice());
     }
+    //metoda do zamowienia dodatkowego wyposazenia
+    public void setEquigpmentOrderByName(String name){
+
+        int index =equitmentName.indexOf(name);
+        equitmentOrder.set(index,1);
+    }
+
+
+
+
+
+
+
+
+    //metoda zwracajaca zene auta z wyposazeniem
     public double calcFullPrice() {
 
         String equitmentNames2 = "";
@@ -49,7 +64,7 @@ public class Auto {
         }
         return equitmentNames2;
     }
-    
+
     public String getVinNumber() {
         return vinNumber;
     }

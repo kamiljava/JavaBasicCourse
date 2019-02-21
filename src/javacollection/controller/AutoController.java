@@ -18,5 +18,12 @@ public class AutoController {
             ordered_autos.forEach(auto -> System.out.println(auto));
     }
 
+        public  void addEguipment(String vin ,String name){
+            for(int i = 0; i< ordered_autos.size(); i ++) {
+                if (ordered_autos.get(i).getVinNumber().equals(vin)) {
+                    ordered_autos.get(i).setEquigpmentOrderByName(name);
+                }
+            }
+    }
 
 }

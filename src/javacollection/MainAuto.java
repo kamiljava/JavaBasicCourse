@@ -10,6 +10,9 @@ public class MainAuto {
         ac.addAuto("PL3f2342f","VW","Golf",40000.0);
         ac.addAuto("GL3f2342f","Volvo","V40",80000.0);
         ac.getAllAutos();
+        ac.addEguipment("PL3f2342f", "ABS");
+        ac.addEguipment("GL3f2342f", "Klimatyzacja");
+        ac.getAllAutos();
 
 
     }
