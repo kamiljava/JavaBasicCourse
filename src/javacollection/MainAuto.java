@@ -1,8 +1,14 @@
 package javacollection;
 
+import algorithms.Main;
 import javacollection.controller.AutoController;
+import java.util.logging.Logger;
+
+
 
 public class MainAuto {
+
+    private static final Logger logo = Logger.getLogger(Main.class.getName() );
     public static void main(String[] args) {
         AutoController ac = new AutoController();
         ac.addAuto("233f2342f","Audi","A4",100000.0);
@@ -17,8 +23,10 @@ public class MainAuto {
         System.out.println();
         ac.removeOrder("GL3f2342ff");
         System.out.println();
+        logo.info("Usunieto zamówienie"); //informacja na czerwono
         ac.removeOrder("GL3f2342f");
         ac.getAllAutos();
-
+        ac.removeEquipment("PL3f2342f");
+        ac.getAllAutos();
     }
 }

@@ -40,5 +40,8 @@ public class AutoController {
         System.out.println("Nie usunięto! " + "Podany numer VIN " + vinNumber + " nie istnieje w bazie danych ");
         return false;
     }
+   public boolean removeEquipment(String vinNumber) {
+
+    }
 
 }

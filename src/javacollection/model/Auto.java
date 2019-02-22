@@ -31,9 +31,14 @@ public class Auto {
     }
     //metoda do zamowienia dodatkowego wyposazenia
     public void setEquigpmentOrderByName(String name){
-
         int index =equitmentName.indexOf(name);
-        equitmentOrder.set(index,1);
+        if (equitmentOrder.get(index)== 0){
+            //dodawanie zamowienia
+            equitmentOrder.set(index,1);
+            //usuwanie zamowienia
+        }else {
+            equitmentOrder.set(index,0);
+        }
     }
 
 
