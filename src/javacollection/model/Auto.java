@@ -10,7 +10,7 @@ public class Auto {
     private String brand, model;
     private double priceBasic;
 
-    private List<String> equitmentName = new ArrayList<>(Arrays.asList("Klimatyzacja","ABS","GPS"));
+    private List<String> equitmentName = new ArrayList<>(Arrays.asList("Klima","ABS","GPS"));
 
     private List<Double> equitmentPrice = new ArrayList<>(Arrays.asList(20000.0,5000.0,1000.0));
     private List<Integer> equitmentOrder = new ArrayList<>(Arrays.asList(0,0,0));

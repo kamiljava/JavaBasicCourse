@@ -2,6 +2,10 @@ package javacollection.controller;
 
 import javacollection.model.Auto;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,8 +44,26 @@ public class AutoController {
         System.out.println("Nie usunięto! " + "Podany numer VIN " + vinNumber + " nie istnieje w bazie danych ");
         return false;
     }
-   public boolean removeEquipment(String vinNumber) {
+    public void removeEqipment(String vin, String eq_name){
+        for(int i = 0; i < ordered_autos.size(); i++){
+            if(ordered_autos.get(i).getVinNumber().equals(vin)){
+                System.out.println("Usunięto wyposażenie");
+                ordered_autos.get(i).setEquigpmentOrderByName(eq_name);
+            }
+        }
+    }
+    //DODAWANIE ZAMOWIEN DO PLIKU      !!!!!!!!!!!!!!!!!!!!!!!!!!
+    public void  saveFile (String fileName) throws IOException {
+        FileWriter fw = new FileWriter(fileName);
+        fw.write("SPRZEDANE SAMOCHODY\n\n");
+        for (Auto a:ordered_autos){
+            fw.write(a.toString()+"\n");
+        }
+        fw.write("\nDATA: "+ LocalDate.now());
+        fw.close();
+
 
     }
 
-}
+    }
+

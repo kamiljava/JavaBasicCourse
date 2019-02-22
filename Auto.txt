@@ -1,0 +1,9 @@
+SPRZEDANE SAMOCHODY
+
+ 233f2342f |       Audi |         A4 |       100000,00 |     Klima, |       120000,00
+ ER3f2342f |   Mercedes |          C |       200000,00 |            |       200000,00
+ PL3f2342f |         VW |       Golf |        40000,00 |            |        40000,00
+ UL3f2342f |        Kia |       Ceed |        60000,00 |   ABS,GPS, |        66000,00
+ ML3f2342f |     Toyota |      jakas |        70000,00 |       ABS, |        75000,00
+
+DATA: 2019-02-22
