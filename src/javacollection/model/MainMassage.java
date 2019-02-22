@@ -2,6 +2,7 @@ package javacollection.model;
 
 import javacollection.controller.MessageController;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainMassage {
@@ -17,6 +18,7 @@ public class MainMassage {
             System.out.println("Masz " + mc.messages.size() + " nowych wiadomosci");
             System.out.println("1.Odczytaj wiadomość \n2.Usuń wiadomość \n3.Dodaj wiadomosci\n0.Wyjść");
             Scanner sc = new Scanner(System.in);
+            try{
             decision = sc.nextInt();
             sc.nextLine();
             switch (decision) {
@@ -39,7 +41,12 @@ public class MainMassage {
                     System.out.println("Dziękuje");
                     break;
             }
-        }
+        }catch (InputMismatchException e){
+                System.out.println("Błąd !!! Wybierz liczbe od 0 do 3");
+                System.out.println();
+                sc.nextLine();
+            }
+
 
     }
-}
+}}

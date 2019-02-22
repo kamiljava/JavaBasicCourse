@@ -18,11 +18,11 @@ public class Message {
 
     @Override
     public String toString() {
-        String pattern = "dd-MM-yyyy HH:mm:ss";
+        String pattern = "HH:mm:ss dd-MM-yyyy EEEE";
         DateTimeFormatter simpleDateFormat = DateTimeFormatter.ofPattern(pattern);
         String date = simpleDateFormat.format(dateTime);
 
-        return "Wiadomosci od: " + author +" odebrane "+ date + " o tresci: "+ content;
+        return "Wiadomosc od: " + author +" odebrano o "+ date + " o tresci: "+ content;
 
     }
 
